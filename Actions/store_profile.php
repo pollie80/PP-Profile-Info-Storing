@@ -1,8 +1,5 @@
 <?php   
-    echo 'your name is ';
-    if(isset($_POST["fname"])){
-        echo $_POST["fname"];
-    }
+    echo 'your name is '.$_POST["fname"];
 
     $connection = mysqli_connect('localhost', 'root', '', 'matchup_db');
     if(!$connection){
@@ -11,16 +8,18 @@
 
     if(isset($_POST['submit'])){
         echo 'Sending to db...';
+        $email = $_POST['email'];
         $first_name = $_POST['fname'];
         $last_name = $_POST['lname'];
         $gender = $_POST['gender'];
         $category = $_POST['category'];
 
-        $sql = "INSERT INTO profile(id, `first name`, `last name`, `gender`, `interested category`)
-        VALUES (1, '$first_name','$last_name','$gender','$category')";
+        $sql = "INSERT INTO profile(`email`,`first name`, `last name`, `gender`, `interested category`)
+        VALUES ('$email','$first_name','$last_name','$gender','$category')";
 
         if (mysqli_query($connection, $sql)) {
             echo "New record created successfully !";
+            include "../login.php";
         } else {
             echo "Error: ".$sql."". mysqli_error($connection);
         }

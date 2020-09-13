@@ -9,11 +9,11 @@ body {
     background-color: aquamarine;
 }
 
-#form {
-    padding: 2%;
-    background-color: darkgrey;
-}
-
 input {
     margin: 7.5px;
+}
+
+.front {
+    padding: 2%;
+    background-color: darkgray;
 }

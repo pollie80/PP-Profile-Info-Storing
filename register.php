@@ -20,13 +20,15 @@
                 <br><br>
                 
                 <!-- get person info -->
-                <label>First name:</label>
-                <input type="text" name="fname" placeholder="First name"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="example@email.com" required><br>
+                <label for="fname">First name:</label>
+                <input type="text" name="fname" placeholder="John" required><br>
                 <label for="lname">Last name:</label>
-                <input type="text" name="lname" placeholder="Last name"><br><br>
+                <input type="text" name="lname" placeholder="Smith" required><br><br>
                 <div>
                     <label>Pick a gender:</label><br>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="male" name="gender" value="male" checked>
                     <label for="male">Male</label><br>
                     <input type="radio" id="female" name="gender" value="female">
                     <label for="female">Female</label><br>

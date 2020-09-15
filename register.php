@@ -20,7 +20,7 @@
                 <br><br>
                 
                 <!-- get person info -->
-                <label for="email">Email:</label>
+                <label for="email">Email (will be treated as username):</label>
                 <input type="email" name="email" placeholder="example@email.com" required><br>
                 <label for="fname">First name:</label>
                 <input type="text" name="fname" placeholder="John" required><br>
